@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SARS-CoV-2 Home page</title>
+		<div style="background-image: url('SARS_CoV2_microscopy.jpg');" > 
+		<link rel="stylesheet" type="text/css" href="HomeP_style.css" />
+	</head>
+	<body>
+		<div id="Title">
+			<h1>SARS-CoV2 genetic database</h1>
+		</div>
+		<div id="Navigation">
+			<ul>
+				<li><a class= "selected" href="">Home</a></li>
+				<li><a href="History_page.html">History</a></li>
+				<li><a href="">Genetic Database</a></li>
+				<li><a href="">Global Statistics</a></li>
+				<li><a href="">References</a></li>
+			</ul>
+		</div>
+		<div id="About_website">
+			<p>This webpage is a deposit of genetic information and protein structures from samples taken from multiple patients suffering from COVID-19 as a results of SARS2 coronavirus infection. This information is acquired from a variety of public databases.</p>
+			<a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2">Click here for more information.</a>
+		</div>
+		<hr />
+		<div id="Intro_body">
+			<p>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is the strain of coronavirus that causes coronavirus disease 2019 (COVID-19), the respiratory illness responsible for the COVID-19 pandemic. Colloquially known as simply the coronavirus, it was previously referred to by its provisional name, 2019 novel coronavirus (2019-nCoV), and has also been called human coronavirus 2019 (HCoV-19 or hCoV-19). The World Health Organization declared the outbreak a Public Health Emergency of International Concern on 30 January 2020, and a pandemic on 11 March 2020</p>
+		</div>
+		<div id="Copyright">
+			Copyright &copy: 2020 Group A productions
+		</div>
+	</body>
+</html>
