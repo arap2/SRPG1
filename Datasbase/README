@@ -12,8 +12,8 @@ using the protein sequences for each ORF in then wuhan covid reference genome, s
 
 PDB_json: Contains all the output files above after parsing - these files are names after the files they are derived from.
 
-EDIT: Datasets were too large to be stored in the github repo, they are stored for furture reference in the LAMP directory:
-/local/www/htdocs/Database and locally on my machine.
+EDIT: Datasets were too large to be stored in the github repo, a clone of this directory containing the data used
+is stored on the LAMP server, navigate to /local/www/htdocs/Database once inside the LAMP server to access it.
 
 LEGACY SCRIPTS
 This folder contains past versions of the parsing script used on the data in Genbank_files. There are also some 
