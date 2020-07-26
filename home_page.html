@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Title in tab & links to relecant CSS file-->
+		<title>SARS-CoV-2 Home page</title>
+		<link rel="stylesheet" type="text/css" href="HomeP_style.css" />
+	</head>
+	<body>
+		<div id="Container">
+			<!--Navigation the same as always, "selected" class on relevant button-->
+			<div id="Navigation">
+                <a href="index.html">Title</a>
+                <a class ="selected" href="home_page.html">Home</a>
+                <a href="History_page.html">History</a>
+                    <div class="dropdown">
+                        <button class="dropbutton" href="Genectic_database.html">Genetic Databases
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown_content">
+                            <a href="Pro_table.php">Protein Database</a>
+							<a href="DNA_Table.php">DNA Database</a>
+							<a href="PDB_table.php">PDB Database</a>
+							<a href="Ref_Seq.php">Reference Database</a>
+						</div>
+					</div>
+				<a href="3Dview.html">Protein Visualiser</a>
+                <a href="Global_stats.html">Global Statistics</a>
+                <a href="User_guide.html">User guide</a>
+				<a href="References.html">References</a>
+				<div id="Nav_line">
+					<hr />
+				</div>
+			</div>
+			<div id="Title">
+				<h1>SARS-CoV-2 Genome Database</h1>
+			</div>
+			<div id="Content">
+				<div id="Main">
+					<div id="About_website">
+						<p>This webpage is a freely accesible deposit of genetic information, protein sequences & protein structures from samples taken from multiple patients who tested positive for COVID-19. This information is acquired from NCBI public database on SARS-CoV-2.</p>
+						<!--Link to webpage, target="_blank" opens in new tab-->
+						<div id="Wiki_link">
+							<a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2" target="_blank">Click here for more information</a>
+							<hr />
+						</div>
+					</div>
+					<div id="Intro_body">
+						<p>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is the strain of coronavirus causing coronavirus disease 2019 (COVID-19), the respiratory illness responsible for 600,000+ deaths worldwide. Colloquially known as simply the coronavirus, it was previously referred to by its provisional name, 2019 novel coronavirus (2019-nCoV), and has also been called human coronavirus 2019 (HCoV-19 or hCoV-19). The World Health Organization declared the outbreak a Public Health Emergency of International Concern on 30 January 2020, and a pandemic on 11 March 2020.</p>
+					</div>
+				</div>
+				<hr />
+				<div id="Submit_title">
+					<h2>Database Contents</h2>
+				</div>
+				<div id="Seq_Counter">
+					<h2>SARS-CoV-2 sequences:</h2>
+					<p>650+ of protein sequences</p>
+					<p>650+ DNA sequences</p>
+					<p>95+ PDB structures</p>
+					<!--Adds space at bottom to prevent boxes overlapping-->
+					<p>&nbsp;</p>
+				</div>
+				<!--Links to external webpages-->
+				<div id="Bottom_Para">
+					<hr />
+					<h2>SARS-CoV-2 Literature</h2>
+					<div id="Left_box">
+						<h3>PubMed.gov</h3>
+						<p>Search engine accessing peer-reviewed biomedical and life sciences literature</p>
+						<form action="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">
+							<input type="submit" value="Go to PubMed" />
+						</form>
+					</div>
+					<div id="Middle_box">
+						<h3>NextStrain.org</h3>
+						<p>Open-source real-time tracking of SARS-CoV-2 and other pathogen evolution </p>
+						<form action="https://nextstrain.org/ncov/global" target="_blank">
+							<input type="submit" value="Go to NextStrain" />
+						</form>
+					</div>
+					<div id="Right_box">
+						<h3>LitCovid</h3>
+						<p>Curated literature hub for tracking up-to-date scientific information about Covid-19</p>
+						<form action="https://www.ncbi.nlm.nih.gov/research/coronavirus/" target="_blank">
+							<input type="submit" value="Go to LitCovid" />
+						</form>
+					</div>
+					<p>&nbsp;</p>
+				</div>	
+			</div>	
+			<div id="Copyright">
+				<hr />
+				Copyright &copy: 2020 ROAMAR productions
+			</div>
+		</div>
+	</body>
+</html>
