@@ -1,6 +1,6 @@
 DATASETS
 This folder cointains both the original genbank files and the parsed JSON files produced from them that were used to populate
-the databases on our website.
+the databases on our website. 
 
 Genbank_files: Contained here are the original genbank downloaded in bulk from NCBI for covid-19 strains published between the 01/01/2020 and the 22/06/2020, filtered for whole genome sequences only.
 
@@ -11,6 +11,9 @@ PDB_genbank_files: Contained here are the genbank files encompassing the structu
 using the protein sequences for each ORF in then wuhan covid reference genome, searched on the 21/07/20.
 
 PDB_json: Contains all the output files above after parsing - these files are names after the files they are derived from.
+
+EDIT: Datasets were too large to be stored in the github repo, they are stored for furture reference in the LAMP directory:
+/local/www/htdocs/Database and locally on my machine.
 
 LEGACY SCRIPTS
 This folder contains past versions of the parsing script used on the data in Genbank_files. There are also some 
