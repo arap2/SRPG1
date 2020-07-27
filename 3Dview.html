@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Protein Visualizer</title>
+		<link rel="stylesheet" type="text/css" href="HomeP_style.css" />
+	</head>
+<script src="ngl.js"></script>
+<style>
+ 
+
+ select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  div>canvas {
+    width: 400px !important;
+    border: 10px blue;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+</style>
+	<body>
+		<div id="Container">
+			<div id="Navigation">
+                <a href="index.html">Title</a>
+                <a class ="selected" href="home_page.html">Home</a>
+                <a href="History_page.html">History</a>
+                    <div class="dropdown">
+                        <button class="dropbutton" href="Genectic_database.html">Genetic Databases
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown_content">
+                            <a href="Pro_table.php">Protein Database</a>
+							<a href="DNA_Table.php">DNA Database</a>
+							<a href="PDB_table.php">PDB Database</a>
+							<a href="Ref_Seq.php">Reference Database</a>
+						</div>
+					</div>
+				<a href="3Dview.html">Protein Visualiser</a>
+                <a href="Global_stats.html">Global Statistics</a>
+                <a href="User_guide.html">User guide</a>
+				<a href="References.html">References</a>
+				<div id="Nav_line">
+					<hr />
+				</div>
+			</div>
+			<div id="Title">
+				<h1>PROTEIN STRUCTURE VISUALIZATION</h1>
+			</div>
+
+<div id="Content">
+				<div id="Main">
+					<div id="About_website">
+						 <a href="https://www.ncbi.nlm.nih.gov/books/NBK21177/">
+          
+        </a>
+        <p><b>The function of a protein is directly dependent on its function. The structure of a protein determines its
+            interaction with other molecules in the body thereby determining the function and behaviour in the body</b>
+        </p>
+                        <div id="Wiki_link">
+							<div id="viewport" style="height:450px;"></div>
+							<hr />
+						</div>
+					</div>
+<hr />
+
+
+
+
+<div id="Intro_body">
+<center><h2>Select your view options<h2></center>
+              <select class="w3-select" type="text" id="change" placeholder="Choose Type">
+                <option value="" disabled selected>Select the structure</option>
+                <option value="5R84"> 5R7Y_A</option>
+                <option value="6LVN">6LVN_A</option>
+                <option value="6LXT">6LXT_A</option>
+                <option value="6LZE">6LZE_A</option>
+                <option value="6lZG">6lZG_A</option>
+                <option value="6MOJ">6MOJ_E</option>
+                <option value="6MOK"> 6MOK_A</option>
+                <option value="6M17">6MI7_E</option>
+                <option value="6M1V">6MIV_A</option>
+                <option value="6M3M">6M3M_A</option>
+                <option value="6MSI">6M51_A</option>
+                <option value="6M17">6M71_A</option>
+                <option value="6M71">6M71_C</option>
+                <option value="6VSB">6VSB_A</option>
+                <option value="6VWW">6VWW_A</option>
+                <option value="6VXS">6VXS_A</option>
+                <option value="6VXX">6VXX_A</option>
+                <option value="6VYB">6VYB_A</option>
+                <option value="6VYO">6VY0_A</option>
+                <option value="6W37">6W37_A</option>
+                <option value="6W41">6W41_C</option>
+                <option value="6W4B">6W4B_A</option>
+                <option value="6W4H">6W4H_A</option>
+                <option value="6W61">6W61_A</option>
+                <option value="6W9C">6W9C_A</option>
+                <option value= "6W9Q">6W9Q_A</option>
+                <option value="6WEY">6WEY_A</option>
+                <option value="6WIQ">6WIQ_A</option>
+                <option value="6WJI">6WJI_A</option>
+                <option value= "6WKP">6WKP_A</option>
+                <option value="6WOJ">6WOJ_A</option>
+                <option value="6WRH">GWRH_A</option>
+                <option value="6WTT">6WTT_A</option>
+                <option value="6WUU">6WUU_A</option>
+                <option value="6WXD">6WXD_A</option>
+                <option value="6WZQ">6WZQ_A</option>
+                <option value= "6WZU">6WZU_A</option>
+                <option value= "6X29">6X29_A</option>
+                <option value="6X2A">6X2A_A</option>
+                <option value= "6X2C">6X2C_A</option>
+                <option value= "6X2G">6X2G_A</option>
+                <option value= "6X6P">6X6P_A</option>
+                <option value= "6X44">6X44_A</option>
+                <option value= "6XA9">6XA9_A</option>
+                <option value ="6xAA">6XBO_A</option>
+                <option value ="6XCM">6XCM_A</option>
+                <option value ="6XDC">6XDC_A</option>
+                <option value ="6XDG">6XDG_A</option>
+                <option value ="6XDH">6XDH_A</option>
+                <option value ="6XE1">6XE1_A</option>
+                <option value ="6XKL">6XKL_A</option>
+                <option value ="6XMK">6XMK_A</option>
+                <option value ="6XOA">6XOA_A</option>
+                <option value ="6YHU">6YHU_A</option>
+                <option value ="6YI3">6YI3_A</option>
+                <option value ="6YLA">6YLA_A</option>
+                <option value ="6YOR">6YOR_A</option>
+                <option value ="6YUN">6YUN_A</option>
+                <option value ="6YVA">6YVA_A</option>
+                <option value ="6YWK">6YWK_A</option>
+                <option value ="6YYT">6YYT_A</option>
+                <option value ="6YZ1">6YZ1_A</option>
+                <option value ="6Y25">6Y25_E</option>
+                <option value ="6Z2M">6Z2M_A</option>
+                <option value ="6Z43">6Z43_A</option>
+                <option value ="6ZCT">6ZCT_A</option>
+                <option value ="6ZCZ">6ZCZ_E</option>
+                <option value ="6ZFO">6ZF0_A</option>
+                <option value ="6ZGE">6ZGE_A</option>
+                <option value ="6ZGG">6ZGG_A</option>
+                <option value ="7BQ7">7BQ7_A</option>
+                <option value ="7BRO">7BRO_A</option>
+                <option value ="7BV1">7BV1_A</option>
+                <option value ="7BW4">7BW4_A</option>
+                <option value ="7BWJ">7BWJ_E</option>
+                <option value ="7BYR">7BYR_A</option>
+                <option value ="7C22">7C22_A</option>
+                <option value ="7C21">7C21_A</option>
+                <option value ="7C2K">7C2K_A</option>
+                <option value ="7C2L">7C2L_A</option>
+                <option value ="7C8V">7C8V_A</option>
+              </select>
+              <br>
+
+              <select  type="text" id="default-structure" placeholder="Choose Type" multiple>
+                <option value="cartoon">Cartoon</option>
+                <option value="water-ion">Water and ion</option>
+                <option value="protein"> Protein</option>
+                <option value="residues">Residues</option>
+              </select>
+
+            </form>						
+</div>
+				</div>
+  <figcaption>
+          <p><b>The published crystal structures from the PDB DATABASE</b></p>
+          <a
+            href="https://www406.lamp.le.ac.uk/PDB_table.php">Database</a>
+        </figcaption>
+				
+
+					<p>&nbsp;</p>
+				</div>	
+			</div>	
+			<div id="Copyright">
+				<hr />
+				Copyright &copy: 2020 ROAMAR productions
+			</div>
+		</div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // main function to be called by jquery
+    // after the page has loaded.
+    // this function from 192 - 250 will be called when the page is fully loaded 
+    $(function () {
+      var stage = new NGL.Stage("viewport");
+      var comp = {};
+      // do not allow user to load a default structure until the user selects a structure
+      $('#default-structure').prop('disabled', true);
+      //take note of changes happening 
+      // to the drop down
+      $('#change').change(function () { 
+        stage.dispose(); //destroy currents tage been displayeed
+        $('#viewport').html(""); // clearing the html
+        stage = new NGL.Stage("viewport"); // create a new stage
+        $('#default-structure').prop('disabled', true);
+        // $this refers to giving an access to whats been queried 
+        //.val gives you the value that has been selected from the dropdown.
+        stage.loadFile("rcsb://" + $(this).val(), { defaultRepresentation: true }). // this loads the file after the file has been selected by the user
+        // then is used as a promise that when file is loaded, the callback function from line 209-214 would be called 
+          then(function (component) {
+            // assigning component to a global variable called comp 
+            comp = component;
+
+             
+            $('#default-structure').prop('disabled', false);
+          });
+      });
+      /**
+       * Function shows structure based on selection
+       * */
+      function showRepresentation (rep){
+        switch (rep) {
+          case 'cartoon':
+            comp.addRepresentation("cartoon", {
+              aspectRatio: 3.0,
+              scale: 1.5
+            });
+            break;
+          case 'water-ion':
+            comp.addRepresentation( "spacefill", {
+                sele: "water or ion",
+                scale: 0.5
+            } );
+            break;
+          case 'protein':
+            comp.addRepresentation("helixorient", {
+             
+              scale: 0.5
+            });
+            break;
+          case 'residues':
+            comp.addRepresentation("label",{
+              labelType:"residue name",
+              fontWeight: "normal",
+            });
+            break;
+
+            
+        }
+      }
+      //determing 
+      $('#default-structure').change(function () {
+        comp.removeAllRepresentations(); // CALLING THE FUNCTION TO REMOVE ALL REPRESENTATION SELECTED
+        // GOES THROUGH ALL STRUCTURES SELECTED
+        $('#default-structure :selected').each(function(){
+          // CHANGES STUFF BASED ON SELECTION.
+          showRepresentation($(this).val());
+          
+        });
+        
+
+      });
+    });
+  </script>	
+
+</body>
+</html>
