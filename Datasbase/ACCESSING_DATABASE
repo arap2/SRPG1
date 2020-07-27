@@ -1,0 +1,16 @@
+CONNECT TO THE LAMP SERVER:
+
+ssh -L 65001:login406.lamp.le.ac.uk:22 <username>@lds-gw.le.ac.uk
+
+ssh <username>@lds-gw.le.ac.uk
+
+ssh <username>@login406.lamp.le.ac.uk
+
+
+ONCE INSIDE THE LAMP SERVER TO CONNECT TO MySQL:
+
+mysql -u lampuser -p
+
+use Covid_19
+
+

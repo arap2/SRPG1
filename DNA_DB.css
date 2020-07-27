@@ -1,0 +1,162 @@
+body, html{
+	/*Applies to all HTML code within the body and HTML tags. Sets standard for all pages*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	color: #FFFFFF;
+	overflow: scroll;
+	height: 100%;
+	background-color: #4682B4;
+	overflow-x: hidden;
+}
+#Container {
+    font-family:Verdana, Geneva, Tahoma, sans-serif 
+}
+a {
+	text-decoration: none; /*Removes default underline on links*/
+}
+h1 {
+	margin: 0;
+}
+#Title{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: x-large;
+	font-family: 'Times New Roman', Times, serif;
+}
+#Navigation {
+	/*Navigation layout universal to all pages, feels more professional*/
+	overflow: hidden;
+    list-style-type: none;
+    font-size: 30px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 5px;
+    border-color: white;
+    color:#333;
+    font-family: 'Courier New', Courier, monospace;
+}
+#Navigation a {
+	float: left;
+ 	display: block;
+  	color: #f2f2f2;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+	font-size: 30px;
+	overflow: hidden;
+}
+#Navigation .selected {
+	font-weight: bold;
+}
+#Navigation a:hover {
+    background-color: #111;
+}
+#Navigation .icon {
+	display: none;
+}
+#Navigation .dropdown {
+	float: left;
+	overflow: hidden;
+}
+#Navigation .dropdown .dropbutton {
+	font-size: 30px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+#Navigation a:hover, .dropdown:hover .dropbutton {
+	background-color: #333;
+}
+#Navigation .dropdown_content {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+#Navigation .dropdown_content a {
+	float: none;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+#Navigation .dropdown_content a:hover {
+	background-color: black;
+	color: white;
+}
+#Navigation .dropdown:hover .dropdown_content {
+	display: block;
+}
+#Nav_line {
+	clear: both;
+}
+#Indent_list {
+	margin-left: 20px;
+	font-size: smaller;
+}
+#Sequence_List {
+	text-align: left;
+	color:white;
+	padding: 10px;
+	width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+	background: rgba(126, 131, 126, 0.25);
+}
+#DNA_search {
+	box-sizing: border-box;
+}
+form.example input[type=text] {
+	padding: 10px;
+	font-size: 15px;
+	border: 1px solid grey;
+	float: left;
+	width: 20%;
+	background: #f1f1f1;
+}
+form.example button {
+	float: left;
+  	width: 5%;
+  	padding: 10px;
+  	background: #f1f1f1;
+  	font-size: 15px;
+  	border: 1px solid grey;
+  	border-left: none;
+  	cursor: pointer;
+}
+#DNAsearch {
+	width: 50%;
+	font-size: 16px;
+}
+#PHP_table {
+	width: 100%;
+}
+#th, td {
+	padding: 15px;
+	border: 1px solid white;
+	width: 14%;
+}
+#PHP_table tr th:nth-child(4){
+	/*4th row (FASTA sequence) wider to accomodate big FASTA's in moderate space*/
+	width: 60%;
+  }
+#Copyright {
+	/*Copyright formatting universal, sits at bottom of page constantly*/
+	clear: both;
+	padding: 10px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}

@@ -1,0 +1,44 @@
+DATASETS
+This folder cointains both the original genbank files and the parsed JSON files produced from them that were used to populate
+the databases on our website. 
+
+Genbank_files: Contained here are the original genbank downloaded in bulk from NCBI for covid-19 strains published between the 01/01/2020 and the 22/06/2020, filtered for whole genome sequences only.
+
+Genbank_json: Contains all the output files above after parsing - the files are split into parts to avoid memory errors when loading
+the json files onto the LAMP server. The dates on these files correspond to the genbank files they are derived from.
+
+PDB_genbank_files: Contained here are the genbank files encompassing the structures that matched to BLAST searches against PDB  
+using the protein sequences for each ORF in then wuhan covid reference genome, searched on the 21/07/20.
+
+PDB_json: Contains all the output files above after parsing - these files are names after the files they are derived from.
+
+EDIT: Datasets were too large to be stored in the github repo, a clone of this directory containing the data used
+is stored on the LAMP server, navigate to /local/www/htdocs/Database once inside the LAMP server to access it.
+
+LEGACY SCRIPTS
+This folder contains past versions of the parsing script used on the data in Genbank_files. There are also some 
+attempts at a variant calling script in this folder.
+
+PARSING SCRIPTS
+This folder has all of the final versions of parsing scripts and databas dumping scripts that were used to populate the SQL database on the LAMP server. To use these scripts they must be in the same directory as the data you wish to parse and/or upload to the database - uploading to the database will require running the scripts with the lamp prefix from within the LAMP server and
+will therefore require access to the LAMP server. 
+
+Genbank_scripts 
+gb_parser_smaller_final.py: This script can be used to parse full GenBank files as long as they are accessible in
+the same directory. To use the script just open it in a text editor, replace the name of the file you wish to parse under filename,then execute the file in the command line. This script was used in the project to parse the files in Genbank files into json files,but can be used by anyone who wishes to extract ORF annotation from genbank files. The 'smaller' in the script name refers to splitting of the json output into multiple files to avoid memory issues upon upload into SQL databases. If you have sufficient disk space, a version of this script "gb_parserv3.py" that produces full files, this can be found in legacy scripts.
+
+lamp_nucleotide_to_mysqlv2_10%.py, lamp_protein_to_mysqlv2.py: These scritps were used to populate the covid_nucleotide table in the Covid_19 database on the lampserver. It is written to only use a subset of the data saved here and on the LAMP server to avoid data limits on the size of the SQL database on the LAMP server. Previous versions for both scripts can be found in the PyMySql_scripts folder in the Legacy Scripts directory, these scripts utilise the full dataset. Both scripts can be adapted to connect to any databases the user has permission to use and can populate and table by simply replacing the table name and the connection pymysql connection details. In conjunction with the parsing scripts, these provide an easy and fast methods for users to upload ORF annotation into MySQL databases.
+
+lamp_reference_to_mysql.py: This is used in the same way as the above files, but to upload the reference genome to the reference table in the databse.
+
+PDB.genbank_scripts
+genbank.pdb_parser: Script is used to extract annotation data from genbank files of published PDB structures. The script generates json files and the files are categorised using the ORF number the structures are derived from.
+
+lamp_pdb_to_mysqlv2.py: Script operates similary to lamp_nucleotide_to_mysqlv2_10%, it populates the covid_structures table used in the structure_database on the website.
+
+
+
+Note on dependencies: The full pipeline requires python3.6 or later in order to complete, the following python packages must also be installed: Biopython (SeqIO),  OS, pprint, json and pymysql,
+and datetime.
+
+for further help contact Adam - arap2@student.le.ac.uk
